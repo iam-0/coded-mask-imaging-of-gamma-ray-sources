@@ -25,7 +25,7 @@ program bayesian_iteration
 
         !Opening and reading the model image (intensity) file.
         !----------------------------------------------------
-        open(unit=13, file="image_file_1.txt", action="read", status="old", iostat=ios)
+        open(unit=13, file="image_file_1.txt", action="read", status="old", iostat=ios) !the text file is an array of 961 elements; all 1s representing initial image
         if (ios /= 0) then
                 print*, "Error in opening the image text file", ios
                 stop
